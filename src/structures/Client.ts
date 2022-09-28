@@ -46,7 +46,7 @@ export default class ExtendedClient extends Client {
   }
 
   async slashCommandsHandler(bot: Client, dir: string): Promise<void> {
-    const commandsPath: string = path.join(__dirname, dir); // => C:/Users/...
+    const commandsPath: string = path.join(__dirname, dir);
     const commandsRecords: string[] = fs.readdirSync(commandsPath);
 
     for (const record of commandsRecords) {
